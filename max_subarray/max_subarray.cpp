@@ -15,11 +15,20 @@ param max_subarray(int *tab, int size) // funkcja zwracaj¹ca parametry maksymaln
 	for (int i = 0; i < size; i++) // pêtla, która idzie po naszej ca³ej tablicy. 
 	{
 		best_temp += tab[i]; 
+		if (best_temp < 0)
+		{
+			best_temp = 0;
+			left_temp = i+1;
+
+		}
 		if (best_temp >= best_sum)
+		{
 			best_sum = best_temp;
+			left_best = left_temp;
+			right_best = i;
 
-
-
+		}
+	
 	}
 
 
