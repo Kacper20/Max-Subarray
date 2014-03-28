@@ -26,11 +26,11 @@ param max_subarray(int *tab, int size) // funkcja zwracaj¹ca parametry maksymaln
 			best_sum = best_temp;
 			left_best = left_temp;
 			right_best = i;
-
 		}
-	
 	}
 
-
-
+	results.a = left_best;
+	results.b = right_best;
+	results.val = best_sum;
+	return results;
 }
